@@ -1,4 +1,7 @@
 package FactoryDemo;
+import FactoryDemo.FactoryDemo;
+import ShapeClasses.*;
+import ShapeFactory.ShapeFactory;
 
 /**
  * Demo class to demonstrate the Factory Pattern.
@@ -15,15 +18,15 @@ public class FactoryDemo {
         ShapeFactory shapeFactory = new ShapeFactory();
 
         // Create and draw a Circle
-        ShapeInterface shape1 = shapeFactory.getShape("CIRCLE");
+        ShapeInterface shape1 = (ShapeInterface) shapeFactory.getShape("CIRCLE");
         shape1.draw();
 
         // Create and draw a Rectangle
-        ShapeInterface shape2 = shapeFactory.getShape("RECTANGLE");
+        ShapeInterface shape2 = (ShapeInterface) shapeFactory.getShape("RECTANGLE");
         shape2.draw();
 
         // Create and draw a Square
-        ShapeInterface shape3 = shapeFactory.getShape("SQUARE");
+        ShapeInterface shape3 = (ShapeInterface) shapeFactory.getShape("SQUARE");
         shape3.draw();
 
         // Create and draw a Triangle
